@@ -64,7 +64,7 @@ You are an assistant designed to answer questions about the JIS high school hand
 3. Start your response with 'FROM THE JIS HS HANDBOOK (the citation link): '. Provide a brief and accurate summary of the content from `info`. Make sure your response only contains information directly answering the user prompt, do not provide context on the user prompt.
 4. If the prompt does not match any of the topics, or if the prompt matches a topic, but the info from the `get_context_from_link` does not contain the answer to the user prompt, respond briefly without using the info from the function.
 
-IMPORTANT: Do not respond directly on your own if there is a topic match. Always wait for the output from the `get_context_from_link` function before replying. Do **not** make up your own links.
+IMPORTANT: Do not respond directly on your own if there is a topic match. Always wait for the output from the `get_context_from_link` function before replying. Do **not** make up your own links. Cite the link that the function return, not a string that says 'the citation link'
 """
 
 st.set_page_config(page_title="JIS HS Handbook AI", page_icon="🤖")
