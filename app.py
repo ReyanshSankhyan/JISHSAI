@@ -51,7 +51,7 @@ def get_context_from_link(topic: str):
         info += p.text
     return info, link
 
-genai.configure(api_key="AIzaSyC7N7rZqG6QMDow1IBPlD_RmzH7_gswzg4")
+genai.configure(api_key=st.secrets["general"]["google_api_key"])
 model = genai.GenerativeModel('gemini-1.5-flash', generation_config=generation_config, safety_settings=safety_settings, tools=[get_context_from_link])
 
 starter_prompt = f"""
